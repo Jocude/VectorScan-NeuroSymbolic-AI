@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Grid/blueprint icon representing a vectorization project -->
+    <path
+        android:fillColor="#90CAF9"
+        android:pathData="M2,2h20v20H2z" />
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M3,3h8v8H3zM13,3h8v8h-8zM3,13h8v8H3zM13,13h8v8h-8z"
+        android:strokeWidth="0.5"
+        android:strokeColor="#0D47A1" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M5,5l4,4M9,5l-4,4"
+        android:strokeWidth="0.4"
+        android:strokeColor="#42A5F5" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M15,15l4,4M19,15l-4,4"
+        android:strokeWidth="0.4"
+        android:strokeColor="#42A5F5" />
+</vector>

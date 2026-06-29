@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!-- Permiso para poder usar el modo AR de la cámara -->
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="false" />
+
+    <!-- Permisos para poder acceder a diversos apartados, como la cámara, el servidor y el almacenamiento -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VectorScan"
+        tools:targetApi="31">
+
+        <!-- Permiso para poder usar el modo AR de la cámara -->
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
+
+        <!-- FileProvider for camera photos -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.vectorscan.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Login Screen (Launcher) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Home Screen -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+
+        <!-- Project Editor -->
+        <activity
+            android:name=".ProjectEditorActivity"
+            android:exported="false" />
+
+        <!-- Settings -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+        <!-- Help -->
+        <activity
+            android:name=".HelpActivity"
+            android:exported="false" />
+
+        <!-- Folder -->
+        <activity
+            android:name=".FolderActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

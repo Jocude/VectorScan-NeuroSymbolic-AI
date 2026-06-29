@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Trash / delete icon -->
+    <!-- Lid -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M9,3 L9,2 L15,2 L15,3 L20,3 L20,5 L4,5 L4,3 Z" />
+    <!-- Can body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M5,6 L19,6 L18,21 L6,21 Z" />
+    <!-- Lines on can -->
+    <path
+        android:strokeColor="#D32F2F"
+        android:strokeWidth="1"
+        android:pathData="M9,9 L9,18 M12,9 L12,18 M15,9 L15,18" />
+</vector>
