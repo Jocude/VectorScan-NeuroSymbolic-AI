@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Windows-style folder icon -->
+    <!-- Folder back tab -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M1,4 L9,4 L11,6 L23,6 L23,20 L1,20 Z" />
+    <!-- Folder front face -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M1,8 L23,8 L23,20 L1,20 Z" />
+    <!-- Folder top edge highlight -->
+    <path
+        android:fillColor="#FFECB3"
+        android:pathData="M1,8 L23,8 L23,9.5 L1,9.5 Z" />
+    <!-- Folder bottom shadow -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M1,19 L23,19 L23,20 L1,20 Z" />
+</vector>

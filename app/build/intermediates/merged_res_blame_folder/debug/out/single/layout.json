@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-mergeDebugResources-57:\\layout\\activity_folder.xml",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_folder.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-mergeDebugResources-57:\\layout\\activity_help.xml",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_help.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-mergeDebugResources-57:\\layout\\activity_project_editor.xml",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_project_editor.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-mergeDebugResources-57:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-mergeDebugResources-57:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "com.example.vectorscan.app-mergeDebugResources-57:/layout/activity_project_editor.xml",
+        "source": "com.example.vectorscan.app-main-60:/layout/activity_project_editor.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-mergeDebugResources-57:\\layout\\activity_settings.xml",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-mergeDebugResources-57:\\layout\\item_project.xml",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\item_project.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-mergeDebugResources-57:\\layout\\dialog_register.xml",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\dialog_register.xml"
+    }
+]

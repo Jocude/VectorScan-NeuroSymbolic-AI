@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\layout_activity_folder.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_folder.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\layout_dialog_register.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\dialog_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\drawable_bg_trash_zone.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\drawable\\bg_trash_zone.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\drawable_bg_trash_zone_active.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\drawable\\bg_trash_zone_active.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\drawable_ic_folder_mini.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\drawable\\ic_folder_mini.xml"
+    },
+    {
+        "merged": "com.example.vectorscan.app-merged_res-58:/layout_activity_project_editor.xml.flat",
+        "source": "com.example.vectorscan.app-main-60:/layout/activity_project_editor.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\drawable_bg_fab_label.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\drawable\\bg_fab_label.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\menu_menu_user.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\menu\\menu_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\drawable_ic_trash.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\drawable\\ic_trash.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\menu_menu_project_options.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\menu\\menu_project_options.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\drawable_ic_folder.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\drawable\\ic_folder.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\layout_item_project.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\item_project.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\drawable_ic_person.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\drawable\\ic_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\layout_activity_project_editor.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_project_editor.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\layout_activity_help.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_help.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\xml\\file_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-merged_res-58:\\drawable_ic_project_placeholder.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.5\\com.example.vectorscan.app-main-60:\\drawable\\ic_project_placeholder.xml"
+    }
+]

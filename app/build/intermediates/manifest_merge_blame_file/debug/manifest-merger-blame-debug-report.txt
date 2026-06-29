@@ -1,0 +1,279 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.vectorscan"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-feature
+11-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:5:5-7:36
+12        android:name="android.hardware.camera"
+12-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:6:9-47
+13        android:required="false" />
+13-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:7:9-33
+14
+15    <!-- Permiso para poder usar el modo AR de la cámara -->
+16    <uses-feature
+16-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:10:5-12:36
+17        android:name="android.hardware.camera.ar"
+17-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:11:9-50
+18        android:required="false" />
+18-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:12:9-33
+19
+20    <!-- Permisos para poder acceder a diversos apartados, como la cámara, el servidor y el almacenamiento -->
+21    <uses-permission android:name="android.permission.CAMERA" />
+21-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:15:5-65
+21-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:15:22-62
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:16:5-67
+22-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:16:22-64
+23    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+23-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:17:5-80
+23-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:17:22-77
+24
+25    <!-- SceneView requires OpenGLES 3.0 or later for 3D rendering. -->
+26    <uses-feature
+26-->[io.github.sceneview:sceneview:1.2.6] C:\Users\jorge\.gradle\caches\transforms-3\913bf49deabd47dea72ed08e44006a4c\transformed\sceneview-1.2.6\AndroidManifest.xml:11:5-13:35
+27        android:glEsVersion="0x00030000"
+27-->[io.github.sceneview:sceneview:1.2.6] C:\Users\jorge\.gradle\caches\transforms-3\913bf49deabd47dea72ed08e44006a4c\transformed\sceneview-1.2.6\AndroidManifest.xml:12:9-41
+28        android:required="true" />
+28-->[io.github.sceneview:sceneview:1.2.6] C:\Users\jorge\.gradle\caches\transforms-3\913bf49deabd47dea72ed08e44006a4c\transformed\sceneview-1.2.6\AndroidManifest.xml:13:9-32
+29
+30    <permission
+30-->[androidx.core:core:1.15.0] C:\Users\jorge\.gradle\caches\transforms-3\3591071c71cbd4fa88a8fb95fb535a18\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+31        android:name="com.example.vectorscan.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+31-->[androidx.core:core:1.15.0] C:\Users\jorge\.gradle\caches\transforms-3\3591071c71cbd4fa88a8fb95fb535a18\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+32        android:protectionLevel="signature" />
+32-->[androidx.core:core:1.15.0] C:\Users\jorge\.gradle\caches\transforms-3\3591071c71cbd4fa88a8fb95fb535a18\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+33
+34    <uses-permission android:name="com.example.vectorscan.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+34-->[androidx.core:core:1.15.0] C:\Users\jorge\.gradle\caches\transforms-3\3591071c71cbd4fa88a8fb95fb535a18\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+34-->[androidx.core:core:1.15.0] C:\Users\jorge\.gradle\caches\transforms-3\3591071c71cbd4fa88a8fb95fb535a18\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+35
+36    <queries>
+36-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:20:5-27:15
+37        <package android:name="com.google.ar.core" />
+37-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:21:9-54
+37-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:21:18-51
+38        <package android:name="com.android.vending" />
+38-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:22:9-55
+38-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:22:18-52
+39
+40        <intent>
+40-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:24:9-26:18
+41            <action android:name="com.google.android.play.core.install.BIND_INSTALL_SERVICE" />
+41-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:25:13-96
+41-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:25:21-93
+42        </intent>
+43    </queries>
+44
+45    <application
+45-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:19:5-81:19
+46        android:allowBackup="true"
+46-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:21:9-35
+47        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+47-->[androidx.core:core:1.15.0] C:\Users\jorge\.gradle\caches\transforms-3\3591071c71cbd4fa88a8fb95fb535a18\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+48        android:dataExtractionRules="@xml/data_extraction_rules"
+48-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:22:9-65
+49        android:debuggable="true"
+50        android:extractNativeLibs="false"
+51        android:fullBackupContent="@xml/backup_rules"
+51-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:23:9-54
+52        android:icon="@android:drawable/sym_def_app_icon"
+52-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:24:9-58
+53        android:label="@string/app_name"
+53-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:25:9-41
+54        android:supportsRtl="true"
+54-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:26:9-35
+55        android:testOnly="true"
+56        android:theme="@style/Theme.VectorScan"
+56-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:27:9-48
+57        android:usesCleartextTraffic="true" >
+57-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:20:9-44
+58
+59        <!-- Permiso para poder usar el modo AR de la cámara -->
+60        <meta-data
+60-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:31:9-33:40
+61            android:name="com.google.ar.core"
+61-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:32:13-46
+62            android:value="required" />
+62-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:33:13-37
+63
+64        <!-- FileProvider for camera photos -->
+65        <provider
+65-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:36:9-44:20
+66            android:name="androidx.core.content.FileProvider"
+66-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:37:13-62
+67            android:authorities="com.example.vectorscan.fileprovider"
+67-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:38:13-70
+68            android:exported="false"
+68-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:39:13-37
+69            android:grantUriPermissions="true" >
+69-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:40:13-47
+70            <meta-data
+70-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:41:13-43:54
+71                android:name="android.support.FILE_PROVIDER_PATHS"
+71-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:42:17-67
+72                android:resource="@xml/file_paths" />
+72-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:43:17-51
+73        </provider>
+74
+75        <!-- Login Screen (Launcher) -->
+76        <activity
+76-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:47:9-54:20
+77            android:name="com.example.vectorscan.LoginActivity"
+77-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:48:13-42
+78            android:exported="true" >
+78-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:49:13-36
+79            <intent-filter>
+79-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:50:13-53:29
+80                <action android:name="android.intent.action.MAIN" />
+80-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:51:17-69
+80-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:51:25-66
+81
+82                <category android:name="android.intent.category.LAUNCHER" />
+82-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:52:17-77
+82-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:52:27-74
+83            </intent-filter>
+84        </activity>
+85
+86        <!-- Home Screen -->
+87        <activity
+87-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:57:9-59:40
+88            android:name="com.example.vectorscan.HomeActivity"
+88-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:58:13-41
+89            android:exported="false" />
+89-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:59:13-37
+90
+91        <!-- Project Editor -->
+92        <activity
+92-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:62:9-64:40
+93            android:name="com.example.vectorscan.ProjectEditorActivity"
+93-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:63:13-50
+94            android:exported="false" />
+94-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:64:13-37
+95
+96        <!-- Settings -->
+97        <activity
+97-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:67:9-69:40
+98            android:name="com.example.vectorscan.SettingsActivity"
+98-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:68:13-45
+99            android:exported="false" />
+99-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:69:13-37
+100
+101        <!-- Help -->
+102        <activity
+102-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:72:9-74:40
+103            android:name="com.example.vectorscan.HelpActivity"
+103-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:73:13-41
+104            android:exported="false" />
+104-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:74:13-37
+105
+106        <!-- Folder -->
+107        <activity
+107-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:77:9-79:40
+108            android:name="com.example.vectorscan.FolderActivity"
+108-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:78:13-43
+109            android:exported="false" />
+109-->C:\Users\jorge\Documents\Antigravity\VectorScan\app\src\main\AndroidManifest.xml:79:13-37
+110
+111        <provider
+111-->[androidx.emoji2:emoji2:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\c5b2e836fff3c00e3288c682f13b0209\transformed\emoji2-1.4.0\AndroidManifest.xml:24:9-32:20
+112            android:name="androidx.startup.InitializationProvider"
+112-->[androidx.emoji2:emoji2:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\c5b2e836fff3c00e3288c682f13b0209\transformed\emoji2-1.4.0\AndroidManifest.xml:25:13-67
+113            android:authorities="com.example.vectorscan.androidx-startup"
+113-->[androidx.emoji2:emoji2:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\c5b2e836fff3c00e3288c682f13b0209\transformed\emoji2-1.4.0\AndroidManifest.xml:26:13-68
+114            android:exported="false" >
+114-->[androidx.emoji2:emoji2:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\c5b2e836fff3c00e3288c682f13b0209\transformed\emoji2-1.4.0\AndroidManifest.xml:27:13-37
+115            <meta-data
+115-->[androidx.emoji2:emoji2:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\c5b2e836fff3c00e3288c682f13b0209\transformed\emoji2-1.4.0\AndroidManifest.xml:29:13-31:52
+116                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+116-->[androidx.emoji2:emoji2:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\c5b2e836fff3c00e3288c682f13b0209\transformed\emoji2-1.4.0\AndroidManifest.xml:30:17-75
+117                android:value="androidx.startup" />
+117-->[androidx.emoji2:emoji2:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\c5b2e836fff3c00e3288c682f13b0209\transformed\emoji2-1.4.0\AndroidManifest.xml:31:17-49
+118            <meta-data
+118-->[androidx.lifecycle:lifecycle-process:2.7.0-beta01] C:\Users\jorge\.gradle\caches\transforms-3\3b37314446f2cb40948ac6c566c9d9f8\transformed\lifecycle-process-2.7.0-beta01\AndroidManifest.xml:29:13-31:52
+119                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+119-->[androidx.lifecycle:lifecycle-process:2.7.0-beta01] C:\Users\jorge\.gradle\caches\transforms-3\3b37314446f2cb40948ac6c566c9d9f8\transformed\lifecycle-process-2.7.0-beta01\AndroidManifest.xml:30:17-78
+120                android:value="androidx.startup" />
+120-->[androidx.lifecycle:lifecycle-process:2.7.0-beta01] C:\Users\jorge\.gradle\caches\transforms-3\3b37314446f2cb40948ac6c566c9d9f8\transformed\lifecycle-process-2.7.0-beta01\AndroidManifest.xml:31:17-49
+121            <meta-data
+121-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+122                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+122-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+123                android:value="androidx.startup" />
+123-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+124        </provider>
+125
+126        <service
+126-->[androidx.room:room-runtime:2.6.1] C:\Users\jorge\.gradle\caches\transforms-3\fac4d04522fbc471079c238b2e9e009a\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+127            android:name="androidx.room.MultiInstanceInvalidationService"
+127-->[androidx.room:room-runtime:2.6.1] C:\Users\jorge\.gradle\caches\transforms-3\fac4d04522fbc471079c238b2e9e009a\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+128            android:directBootAware="true"
+128-->[androidx.room:room-runtime:2.6.1] C:\Users\jorge\.gradle\caches\transforms-3\fac4d04522fbc471079c238b2e9e009a\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+129            android:exported="false" /> <!-- The minimal version code of ARCore APK required for an app using this SDK. -->
+129-->[androidx.room:room-runtime:2.6.1] C:\Users\jorge\.gradle\caches\transforms-3\fac4d04522fbc471079c238b2e9e009a\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+130        <meta-data
+130-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:32:9-34:41
+131            android:name="com.google.ar.core.min_apk_version"
+131-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:33:13-62
+132            android:value="242590000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
+132-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:34:13-38
+133        <activity
+133-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:36:9-42:80
+134            android:name="com.google.ar.core.InstallActivity"
+134-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:37:13-62
+135            android:configChanges="keyboardHidden|orientation|screenSize"
+135-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:38:13-74
+136            android:excludeFromRecents="true"
+136-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:39:13-46
+137            android:exported="false"
+137-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:40:13-37
+138            android:launchMode="singleTop"
+138-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:41:13-43
+139            android:theme="@android:style/Theme.Material.Light.Dialog.Alert" />
+139-->[com.google.ar:core:1.47.0] C:\Users\jorge\.gradle\caches\transforms-3\347b1c4a68696b0b26caacba1df59d33\transformed\core-1.47.0\AndroidManifest.xml:42:13-77
+140
+141        <receiver
+141-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+142            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+142-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+143            android:directBootAware="false"
+143-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+144            android:enabled="true"
+144-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+145            android:exported="true"
+145-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+146            android:permission="android.permission.DUMP" >
+146-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+147            <intent-filter>
+147-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+148                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+148-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+148-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+149            </intent-filter>
+150            <intent-filter>
+150-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+151                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+151-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+151-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+152            </intent-filter>
+153            <intent-filter>
+153-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+154                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+154-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+154-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+155            </intent-filter>
+156            <intent-filter>
+156-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+157                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+157-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+157-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\jorge\.gradle\caches\transforms-3\737e19e210ef9053b54ab8419dbc40de\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+158            </intent-filter>
+159        </receiver>
+160    </application>
+161
+162</manifest>
