@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
-    <external-path name="my_images" path="Android/data/com.example.vectorscan/files/Pictures" />
-    <external-files-path name="my_images_ext" path="Pictures" />
+    <!-- Fotos tomadas con la cámara -->
+    <external-files-path name="fotos" path="Pictures/" />
+    <!-- Modelos que se comparten desde el editor -->
+    <cache-path name="compartir" path="compartir/" />
 </paths>

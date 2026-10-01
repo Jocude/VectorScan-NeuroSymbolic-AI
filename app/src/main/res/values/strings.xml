@@ -7,11 +7,14 @@
     <string name="create_folder">Crear carpeta</string>
     <string name="import_project">Importar proyecto</string>
     <string name="empty_folder">Esta carpeta está vacía</string>
+    <string name="empty_home">Aún no tienes proyectos.\n\nPulsa + y haz una foto a un plano para convertirlo en un modelo 3D.</string>
     <string name="search_hint">Buscar proyectos…</string>
     <string name="take_photo">Tomar foto</string>
     <string name="gallery">Galería</string>
     <string name="cancel">Cancelar</string>
     <string name="save">Guardar</string>
+    <string name="next">Siguiente</string>
+    <string name="close">Cerrar</string>
     <string name="delete_confirm_title">Confirmar eliminación</string>
     <string name="delete_confirm_file">¿Seguro que quieres eliminar el archivo %1$s?</string>
     <string name="delete_confirm_folder">¿Seguro que quieres eliminar la carpeta %1$s?</string>
@@ -19,6 +22,13 @@
     <string name="move_out_label">Sacar de carpeta</string>
     <string name="item_deleted">Eliminado correctamente</string>
     <string name="item_moved">Movido correctamente</string>
+
+    <!-- New project -->
+    <string name="project_name">Nombre del proyecto</string>
+    <string name="project_width">Ancho real del edificio en metros (opcional)</string>
+    <string name="project_width_help">Si lo indicas, el modelo sale a escala exacta. Si no, se estima.</string>
+    <string name="project_width_error">Introduce un número entre 1 y 500</string>
+    <string name="error_prefix">Revisa el nombre: %1$s</string>
 
     <!-- User menu -->
     <string name="settings">Ajustes</string>
@@ -29,19 +39,54 @@
     <string name="dark_mode">Modo oscuro</string>
     <string name="keep_session">Mantener sesión iniciada</string>
     <string name="settings_title">Ajustes</string>
+    <string name="server_section">Servidor de procesado</string>
+    <string name="server_help">Dirección del servidor que convierte los planos en 3D. En el emulador, http://10.0.2.2:8000 es tu ordenador. En un móvil, usa la IP del ordenador en tu red (por ejemplo 192.168.1.20).</string>
+    <string name="server_url">Dirección del servidor</string>
+    <string name="server_test">Probar conexión</string>
+    <string name="server_testing">Conectando…</string>
+    <string name="server_ok">✓ Conectado (versión %1$s)</string>
+    <string name="server_error">✗ %1$s</string>
+    <string name="server_invalid">Dirección no válida</string>
 
     <!-- Help -->
     <string name="help_title">Ayuda</string>
-    <string name="help_description">VectorScan es una aplicación de digitalización que permite convertir imágenes planas (fotografías, planos 2D, bocetos) en formato vectorial compatible con editores como AutoCAD.\n\n<b>Funcionalidades principales:</b>\n\n• <b>Captura de imágenes:</b> Toma fotos directamente con la cámara del dispositivo o selecciona imágenes existentes de la galería.\n\n• <b>Gestión de proyectos:</b> Organiza tus trabajos en proyectos individuales con vista previa. Crea, guarda y accede a tus proyectos fácilmente desde la pantalla principal.\n\n• <b>Modo 2D:</b> Visualiza y trabaja con tus imágenes en modo bidimensional para análisis y vectorización.\n\n• <b>Modo 3D (próximamente):</b> Funcionalidad en desarrollo que permitirá la visualización tridimensional de tus proyectos.\n\n• <b>Exportar y Compartir (próximamente):</b> Próximamente podrás exportar tus proyectos vectorizados en distintos formatos y compartirlos directamente desde la aplicación.\n\n• <b>Ajustes personalizados:</b> Configura la aplicación a tu gusto con opciones como modo oscuro y mantener la sesión iniciada.\n\n• <b>Importar proyectos (próximamente):</b> Importa proyectos existentes desde archivos externos.</string>
+    <string name="help_description"><![CDATA[VectorScan convierte la foto de un plano 2D en un modelo 3D que puedes explorar en el móvil o colocar sobre la mesa con realidad aumentada.<br><br>
+<b>Cómo se usa</b><br><br>
+• <b>Crear proyecto:</b> pulsa + → Crear proyecto, ponle nombre y, si lo sabes, el ancho real del edificio. Después haz una foto al plano o elígelo de la galería.<br><br>
+• <b>Modelo 3D:</b> el servidor detecta paredes, puertas, ventanas y estancias, y devuelve el modelo. Cambia entre 2D y 3D con los botones de arriba; arrastra para girar y pellizca para acercar.<br><br>
+• <b>Realidad aumentada:</b> en la vista 3D pulsa «Ver en RA», mueve el móvil para que detecte el suelo o una mesa y toca para colocar el modelo. Puedes verlo como maqueta (1:50) o a tamaño real.<br><br>
+• <b>Compartir:</b> el botón de compartir envía el modelo en formato GLB, que se abre en Blender, en visores web o en cualquier herramienta compatible con glTF.<br><br>
+• <b>Importar:</b> + → Importar proyecto abre un archivo GLB que ya tengas.<br><br>
+• <b>Organizar:</b> crea carpetas y arrastra los proyectos dentro, fuera o a la papelera.<br><br>
+<b>Consejos para la foto</b><br><br>
+• Haz la foto de frente, con buena luz y con el plano entero dentro del encuadre.<br>
+• Funciona mejor con planos de líneas negras sobre fondo blanco y paredes gruesas.<br>
+• Si el servidor no responde, revisa su dirección en Ajustes.]]></string>
 
     <!-- Project editor -->
     <string name="project_editor_title">Editor de proyecto</string>
     <string name="mode_2d">2D</string>
     <string name="mode_3d">3D</string>
-    <string name="export_option">Exportar</string>
-    <string name="share_option">Compartir</string>
+    <string name="view_in_ar">Ver en RA</string>
+    <string name="retry_generation">Reintentar generación 3D</string>
+    <string name="generate_model">Generar modelo 3D</string>
+    <string name="generating_model">Generando modelo 3D…</string>
+    <string name="generation_failed">No se ha podido generar el modelo</string>
+    <string name="generation_failed_hint">Puedes guardar solo la imagen y generarlo más tarde, o reintentarlo.</string>
+    <string name="model_not_available">Modelo 3D no disponible</string>
+    <string name="model_load_error">No se ha podido abrir el modelo 3D</string>
+    <string name="share_model">Compartir modelo 3D</string>
+    <string name="share_error">No se ha podido compartir el modelo</string>
     <string name="project_saved">Proyecto guardado</string>
+    <string name="project_saved_2d_only">Proyecto guardado (solo imagen 2D)</string>
+    <string name="save_error">Error al guardar</string>
 
-    <!-- Test project -->
-    <string name="test_project_name">Proyecto de prueba</string>
+    <!-- AR -->
+    <string name="ar_not_supported">Este dispositivo no es compatible con ARCore</string>
+    <string name="ar_hint_scan">Mueve el móvil despacio para detectar el suelo o una mesa</string>
+    <string name="ar_hint_tap">Toca una superficie para colocar el modelo</string>
+    <string name="ar_hint_tracking_lost">Se ha perdido el seguimiento: apunta a una zona con más luz y textura</string>
+    <string name="ar_scale_real">Tamaño real</string>
+    <string name="ar_scale_model">Maqueta 1:50</string>
+    <string name="ar_session_error">No se ha podido iniciar la realidad aumentada: %1$s</string>
 </resources>

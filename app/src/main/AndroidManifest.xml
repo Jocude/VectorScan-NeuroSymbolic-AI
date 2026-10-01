@@ -1,41 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Cámara: fotos de planos y realidad aumentada. No es obligatoria para instalar la app. -->
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
-
-    <!-- Permiso para poder usar el modo AR de la cámara -->
     <uses-feature
         android:name="android.hardware.camera.ar"
         android:required="false" />
 
-    <!-- Permisos para poder acceder a diversos apartados, como la cámara, el servidor y el almacenamiento -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <!--
+        usesCleartextTraffic: el servidor de VectorScan se ejecuta normalmente en la red local
+        (http://IP:8000), sin HTTPS.
+    -->
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@android:drawable/sym_def_app_icon"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.VectorScan"
-        tools:targetApi="31">
+        android:usesCleartextTraffic="true">
 
-        <!-- Permiso para poder usar el modo AR de la cámara -->
+        <!-- ARCore opcional: la app funciona sin él y solo la vista RA lo necesita. -->
         <meta-data
             android:name="com.google.ar.core"
-            android:value="required" />
+            android:value="optional" />
 
-        <!-- FileProvider for camera photos -->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.vectorscan.fileprovider"
+            android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -43,7 +42,6 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <!-- Login Screen (Launcher) -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -52,32 +50,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Home Screen -->
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
-
-        <!-- Project Editor -->
         <activity
             android:name=".ProjectEditorActivity"
             android:exported="false" />
-
-        <!-- Settings -->
+        <activity
+            android:name=".ArViewerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.VectorScan.Fullscreen" />
         <activity
             android:name=".SettingsActivity"
             android:exported="false" />
-
-        <!-- Help -->
         <activity
             android:name=".HelpActivity"
             android:exported="false" />
-
-        <!-- Folder -->
         <activity
             android:name=".FolderActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>

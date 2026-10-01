@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VectorScan</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.3.1/dist/model-viewer.min.js"></script>
+  <style>
+    :root { --azul: #1565c0; --fondo: #f4f6fa; --borde: #d8dee9; --texto: #1d2433; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, sans-serif; background: var(--fondo); color: var(--texto); }
+    header { background: var(--azul); color: #fff; padding: 16px 24px; }
+    header h1 { margin: 0; font-size: 1.4rem; }
+    header p { margin: 4px 0 0; opacity: .85; }
+    main { max-width: 1200px; margin: 0 auto; padding: 24px 16px; display: grid; gap: 16px;
+           grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    @media (max-width: 800px) { main { grid-template-columns: minmax(0, 1fr); } }
+    section { background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 16px; }
+    h2 { margin: 0 0 12px; font-size: 1.05rem; }
+    form { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+    label { display: flex; flex-direction: column; gap: 4px; font-size: .85rem; }
+    input[type=number] { width: 120px; padding: 6px; }
+    button { background: var(--azul); color: #fff; border: 0; border-radius: 8px; padding: 9px 18px;
+             font-size: .95rem; cursor: pointer; }
+    button:disabled { opacity: .5; cursor: wait; }
+    #previa { width: 100%; border-radius: 8px; display: none; }
+    model-viewer { width: 100%; height: 460px; background: #eef1f6; border-radius: 8px; }
+    #estado { min-height: 1.2em; font-size: .9rem; }
+    .error { color: #b3261e; }
+    table { border-collapse: collapse; width: 100%; font-size: .9rem; margin-top: 12px; }
+    td { border-top: 1px solid var(--borde); padding: 6px 4px; }
+    a { color: var(--azul); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>VectorScan</h1>
+  <p>Sube la imagen de un plano 2D y obtén su modelo 3D (GLB).</p>
+</header>
+<main>
+  <section>
+    <h2>1. Plano</h2>
+    <form id="formulario">
+      <label>Imagen (JPG, PNG o WebP)
+        <input type="file" name="file" accept="image/*" required>
+      </label>
+      <label>Ancho real (m, opcional)
+        <input type="number" name="ancho_m" min="1" max="500" step="0.01" placeholder="auto">
+      </label>
+      <label>Altura de paredes (m)
+        <input type="number" name="altura_m" min="2" max="6" step="0.1" value="2.6">
+      </label>
+      <button id="boton">Generar modelo 3D</button>
+    </form>
+    <p id="estado"></p>
+    <img id="previa" alt="Elementos detectados en el plano">
+    <table id="tabla" hidden></table>
+  </section>
+  <section>
+    <h2>2. Modelo 3D</h2>
+    <model-viewer id="visor" camera-controls touch-action="pan-y" shadow-intensity="1"
+                  camera-orbit="30deg 55deg auto" ar ar-modes="webxr scene-viewer quick-look"
+                  alt="Modelo 3D generado"></model-viewer>
+    <p><a id="descarga" hidden download="modelo.glb">Descargar GLB</a> · <a href="/docs">API (OpenAPI)</a></p>
+  </section>
+</main>
+<script>
+  const formulario = document.getElementById('formulario');
+  const estado = document.getElementById('estado');
+  const boton = document.getElementById('boton');
+
+  async function pedir(ruta, datos) {
+    const r = await fetch(ruta, { method: 'POST', body: datos });
+    if (!r.ok) {
+      let detalle = r.statusText;
+      try { detalle = (await r.json()).detail; } catch (e) {}
+      throw new Error(typeof detalle === 'string' ? detalle : JSON.stringify(detalle));
+    }
+    return r;
+  }
+
+  function fila(nombre, valor) {
+    const tr = document.createElement('tr');
+    for (const v of [nombre, valor]) { const td = document.createElement('td'); td.textContent = v; tr.append(td); }
+    return tr;
+  }
+
+  formulario.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const datos = new FormData(formulario);
+    if (!datos.get('ancho_m')) datos.delete('ancho_m');
+    boton.disabled = true;
+    estado.className = '';
+    estado.textContent = 'Procesando…';
+    try {
+      const [glb, png, json] = await Promise.all([
+        pedir('/predict', datos).then(r => r.blob()),
+        pedir('/preview', datos).then(r => r.blob()),
+        pedir('/analyze', datos).then(r => r.json()),
+      ]);
+      const urlGlb = URL.createObjectURL(glb);
+      document.getElementById('visor').src = urlGlb;
+      const descarga = document.getElementById('descarga');
+      descarga.href = urlGlb; descarga.hidden = false;
+      const previa = document.getElementById('previa');
+      previa.src = URL.createObjectURL(png); previa.style.display = 'block';
+
+      const tabla = document.getElementById('tabla');
+      tabla.replaceChildren(
+        fila('Dimensiones', `${json.ancho_m} × ${json.fondo_m} m`),
+        fila('Paredes', json.paredes),
+        fila('Puertas', json.puertas),
+        fila('Ventanas', json.ventanas),
+        ...json.habitaciones.map(h => fila(`Habitación ${h.id}`, `${h.area_m2} m²`)),
+      );
+      tabla.hidden = false;
+      estado.textContent = 'Listo. Verde: puertas · azul: ventanas · rojo: paredes.';
+    } catch (e) {
+      estado.className = 'error';
+      estado.textContent = e.message;
+    } finally {
+      boton.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

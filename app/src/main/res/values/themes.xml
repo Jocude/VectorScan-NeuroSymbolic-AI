@@ -9,4 +9,10 @@
         <item name="colorOnSecondary">#000000</item>
         <item name="android:statusBarColor">#0D47A1</item>
     </style>
+
+    <!-- Vista de realidad aumentada: la cámara ocupa toda la pantalla. -->
+    <style name="Theme.VectorScan.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
 </resources>

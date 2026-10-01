@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cubo en perspectiva: proyecto que solo tiene modelo 3D. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#1565C0"
+        android:fillType="evenOdd"
+        android:pathData="M12,2 L21,7 L21,17 L12,22 L3,17 L3,7 Z M12,4.3 L5.6,7.8 L12,11.3 L18.4,7.8 Z M5,9.5 L5,15.8 L11,19.2 L11,13 Z M13,13 L13,19.2 L19,15.8 L19,9.5 Z" />
+</vector>

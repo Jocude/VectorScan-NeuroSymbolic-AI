@@ -1,0 +1,8 @@
+fastapi==0.142.2
+uvicorn==0.54.0
+python-multipart==0.0.32
+numpy==2.5.3
+opencv-python-headless==5.0.0.93
+shapely==2.1.2
+trimesh==5.1.0
+mapbox-earcut==2.1.0

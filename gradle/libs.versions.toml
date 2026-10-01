@@ -1,0 +1,29 @@
+[versions]
+agp = "9.4.1"
+appcompat = "1.8.0"
+material = "1.14.0"
+constraintlayout = "2.2.2"
+core = "1.19.1"
+activity = "1.13.0"
+okhttp = "4.12.0"
+sceneview = "1.2.6"
+arcore = "1.47.0"
+junit = "4.13.2"
+json = "20250517"
+
+[libraries]
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-core = { group = "androidx.core", name = "core", version.ref = "core" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-mockwebserver = { group = "com.squareup.okhttp3", name = "mockwebserver", version.ref = "okhttp" }
+sceneview = { group = "io.github.sceneview", name = "sceneview", version.ref = "sceneview" }
+arsceneview = { group = "io.github.sceneview", name = "arsceneview", version.ref = "sceneview" }
+arcore = { group = "com.google.ar", name = "core", version.ref = "arcore" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+json = { group = "org.json", name = "json", version.ref = "json" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }

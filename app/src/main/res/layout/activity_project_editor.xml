@@ -72,7 +72,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
                 android:background="#F5F5F5"
-                android:contentDescription="Imagen del proyecto" />
+                android:contentDescription="@string/project_editor_title" />
 
             <!-- 3D VIEW -->
             <io.github.sceneview.SceneView
@@ -80,6 +80,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:visibility="gone" />
+
+            <!-- Ver en realidad aumentada (solo en la vista 3D) -->
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/fabAR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:text="@string/view_in_ar"
+                android:textColor="#FFFFFF"
+                android:visibility="gone"
+                app:backgroundTint="#1565C0"
+                app:icon="@drawable/ic_model_3d"
+                app:iconTint="#FFFFFF" />
 
             <!-- Loading Overlay -->
             <LinearLayout
@@ -102,7 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Generando modelo 3D..."
+                    android:text="@string/generating_model"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -142,24 +156,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="🔄 Reintentar generación 3D"
+            android:text="@string/retry_generation"
             android:textColor="#E65100"
             android:visibility="gone" />
 
     </LinearLayout>
-
-    <!-- Floating Action Button for AR -->
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/fabAR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="32dp"
-        android:text="Ver en AR"
-        app:icon="@drawable/ic_person"
-        android:visibility="gone"
-        app:backgroundTint="#1565C0"
-        android:textColor="#FFFFFF"
-        app:iconTint="#FFFFFF" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

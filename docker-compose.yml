@@ -1,0 +1,7 @@
+services:
+  server:
+    build: ./server
+    image: vectorscan-server
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

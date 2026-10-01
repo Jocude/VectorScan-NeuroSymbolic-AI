@@ -1,0 +1,78 @@
+# En cada push a main y en cada pull request: tests y lint de la app Android, y lint, tests
+# e imagen Docker del servidor.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  android:
+    name: App Android
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v5
+
+      - name: Tests, lint y APK de depuración
+        run: ./gradlew testDebugUnitTest lintDebug assembleDebug
+
+      - name: Guardar informes
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: informes-android
+          path: |
+            app/build/reports/
+            app/build/test-results/
+
+      - name: Guardar APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: vectorscan-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+  server-lint:
+    name: Servidor (ruff)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/ruff-action@v4.1.0
+        with:
+          src: server
+      - run: ruff format --check server
+
+  server-tests:
+    name: Servidor (tests)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: server/requirements*.txt
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest -v
+
+  server-docker:
+    name: Servidor (imagen Docker)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Construir la imagen y comprobar /health
+        run: |
+          docker compose up -d --build --wait
+          curl -fsS http://localhost:8000/health
+          docker compose down
